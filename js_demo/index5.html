@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self-Modifying Web Page</title>
+<style>
+    /* Your CSS styles here */
+</style>
+</head>
+<body>
+    <h1 id="greeting">Welcome to the Self-Modifying Web Page!</h1>
+
+    <script>
+        
+        function modifyPage() {
+            // Here you can define how you want the page to modify itself
+            // For example, changing the text of an element
+            var greetingElement = document.getElementById("greeting");
+            var greetings = ["Hello!", "Hi there!", "Welcome back!"];
+            var randomIndex = Math.floor(Math.random() * greetings.length);
+            greetingElement.textContent = greetings[randomIndex];
+        }
+
+        
+        modifyPage();
+
+        
+        setInterval(modifyPage, 60000); //  = 1 minute
+    </script>
+</body>
+</html>

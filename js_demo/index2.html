@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p>Account Creation </p>
+        Enter Name <input type="text" id="namee" placeholder="Enter the name">
+        <br><br>
+        Enter Password <input type="password" name="" id="pswd" placeholder="Enter Password">
+        Confirm Password <input type="password" name="" placeholder="Confirm Password" id="cpswd">
+        <button type="submit" onclick="check()">Submit</button>
+    </div>
+    <script>
+       
+        function check(){
+            let a=document.getElementById("namee").value;
+        let pswd=document.getElementById("pswd").value;
+        let cpswd=document.getElementById("cpswd").value;
+           if(pswd.length<6){
+            alert("password length small");
+           }
+          else if(pswd!=cpswd){
+            alert("password does not match")
+           }
+           else if(pswd==cpswd){
+            alert("password match sucessfully")
+           }
+        }
+    </script>
+</body>
+</html>

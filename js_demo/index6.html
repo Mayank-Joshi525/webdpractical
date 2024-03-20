@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day of the Week Calculator</title>
+<style>
+   
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    input[type="text"] {
+        padding: 8px;
+        margin-top: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+    <h2>Day of the Week Calculator</h2>
+    <input type="text" id="birthdate" placeholder="Enter your birth date (YYYY-MM-DD)">
+    <br>
+    <button onclick="calculateDayOfWeek()">Calculate</button>
+
+    <script>
+        function calculateDayOfWeek() {
+            var birthDateInput = document.getElementById("birthdate").value;
+            var birthDate = new Date(birthDateInput);
+
+            if (isNaN(birthDate.getTime())) {
+                alert("Please enter a valid date in the format YYYY-MM-DD");
+                return;
+            }
+
+            var dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][birthDate.getDay()];
+            alert("You were born on a " + dayOfWeek + "!");
+        }
+    </script>
+</body>
+</html>
