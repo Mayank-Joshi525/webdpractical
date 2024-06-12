@@ -1,10 +1,11 @@
 import React from 'react';
-import Calculator from './Calculator';
+import SimpleForm from './SimpleForm';
+import './SimpleForm.css';
 
 function App() {
     return (
         <div className="App">
-            <Calculator />
+            <SimpleForm />
         </div>
     );
 }
